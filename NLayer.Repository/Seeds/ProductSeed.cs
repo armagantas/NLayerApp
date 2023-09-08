@@ -27,7 +27,7 @@ namespace NLayer.Repository.Seeds
                 Name = "Faber Castel 3B",
                 Stock = 75,
                 Price = 15,
-                CategoryId = 1,
+                CategoryId = 2,
                 CreatedDate = DateTime.Now,
             }, new Product
             {
@@ -35,7 +35,7 @@ namespace NLayer.Repository.Seeds
                 Name = "Book 1",
                 Stock = 50,
                 Price = 20,
-                CategoryId = 2,
+                CategoryId = 3,
                 CreatedDate = DateTime.Now,
             }, new Product
             {
@@ -43,7 +43,7 @@ namespace NLayer.Repository.Seeds
                 Name = "Book 2",
                 Stock = 25,
                 Price = 25,
-                CategoryId = 2,
+                CategoryId = 3,
                 CreatedDate = DateTime.Now,
             });
         }

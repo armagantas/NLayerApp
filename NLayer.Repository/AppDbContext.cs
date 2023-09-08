@@ -33,7 +33,7 @@ namespace NLayer.Repository
                 Width = 20,
             }, new ProductFeature
             {
-                Id = 1,
+                Id = 2,
                 ProductId = 2,
                 Color = "Blue",
                 Height = 15,
