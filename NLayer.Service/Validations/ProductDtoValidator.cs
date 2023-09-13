@@ -13,8 +13,11 @@ namespace NLayer.Service.Validations
         public ProductDtoValidator()
         {
             RuleFor(x => x.Name).NotNull().WithMessage("Name is required").NotEmpty().WithMessage("Name is required");
+
             RuleFor(x => x.Price).InclusiveBetween(1,int.MaxValue).WithMessage("Price must be greater than 0.");
+
             RuleFor(x => x.Stock).InclusiveBetween(1, short.MaxValue).WithMessage("Stock must be greater than 0.");
+
             RuleFor(x => x.CategoryId).InclusiveBetween(1, int.MaxValue).WithMessage("CategoryId must be greater than 0.");    
         }
     }
