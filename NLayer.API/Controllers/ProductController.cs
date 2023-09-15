@@ -36,6 +36,7 @@ namespace NLayer.API.Controllers
 
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         [HttpGet("{id}")] // api/product/5
         public async Task<IActionResult> GetById(int id)
         {
