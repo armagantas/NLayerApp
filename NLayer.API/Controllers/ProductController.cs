@@ -21,11 +21,12 @@ namespace NLayer.API.Controllers
             _service = productService;
         }
 
-        [HttpGet("[action]")] // api/product/GetProductsWithCategory
+        [HttpGet("[action]")]
         public async Task<IActionResult> GetProductsWithCategory()
         {
-            return CreateActionResult(await _service.GetProductsWithCategory());
-        }   
+
+            return CreateActionResult(CustomResponseDto<List<ProductWithCategoryDto>>.Success(await _service.GetProductsWithCategory(), 200));
+        }
 
         [HttpGet] // api/product
         public async Task<IActionResult> GetAllProducts()
