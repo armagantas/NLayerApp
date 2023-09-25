@@ -24,6 +24,19 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+
+
+
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());

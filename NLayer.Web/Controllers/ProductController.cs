@@ -22,7 +22,7 @@ namespace NLayer.Web.Controllers
         }
         public async Task<IActionResult> Index()
         {  
-            return View(await _productService.GetProductsWithCategory()); 
+            return View((await _productService.GetProductsWithCategory()).Data); 
         }
 
         [ServiceFilter(typeof(NotFoundFilter<Product>))]
