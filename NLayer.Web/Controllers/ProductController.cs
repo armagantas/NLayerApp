@@ -25,6 +25,7 @@ namespace NLayer.Web.Controllers
             return View(await _productService.GetProductsWithCategory()); 
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         
         public async Task<IActionResult> Save()
         {
